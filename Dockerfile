@@ -1,6 +1,6 @@
 FROM andrewnk/base-alpine-php
 
-RUN apk add --no-cache libxml2-dev openssl-dev git bash yarn zlib zlib-dev libpng libpng-dev libwebp libwebp-dev libjpeg-turbo libjpeg-turbo-dev nasm build-base automake autoconf file
+RUN apk add --no-cache libxml2-dev openssl-dev git bash yarn zlib zlib-dev libpng libpng-dev libwebp libwebp-dev libjpeg-turbo libjpeg-turbo-dev nasm build-base automake autoconf file gmp gmp-dev
 
 RUN EXPECTED_COMPOSER_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig) && \
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
