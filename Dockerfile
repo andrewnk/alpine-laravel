@@ -9,5 +9,5 @@ RUN EXPECTED_COMPOSER_SIGNATURE=$(wget -q -O - https://composer.github.io/instal
     php -r "unlink('composer-setup.php');"
 
 RUN docker-php-source extract && \
-    docker-php-ext-install json ctype xml tokenizer mbstring pdo pdo_mysql && \
+    docker-php-ext-install json gmp ctype xml tokenizer mbstring pdo pdo_mysql && \
     docker-php-source delete
